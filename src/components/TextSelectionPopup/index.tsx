@@ -13,7 +13,9 @@ const TextSelectionPopup: React.FC<TextSelectionPopupProps> = ({ onAskSelected }
     const location = useLocation();
 
     // Only enable on docs pages
-    const isDocsPage = location.pathname.startsWith('/docs') || location.pathname.startsWith('/urdu');
+    const isDocsPage = location.pathname.startsWith('/docs') ||
+        location.pathname.startsWith('/urdu') ||
+        location.pathname.startsWith('/personalization');
 
     useEffect(() => {
         if (!isDocsPage) {
@@ -44,7 +46,7 @@ const TextSelectionPopup: React.FC<TextSelectionPopupProps> = ({ onAskSelected }
 
         const handleClickOutside = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            if (!target.closest(`.${styles.popup}`)) {
+            if (!target.closest(.${styles.popup})) {
                 setVisible(false);
             }
         };
@@ -70,8 +72,8 @@ const TextSelectionPopup: React.FC<TextSelectionPopupProps> = ({ onAskSelected }
         <div
             className={styles.popup}
             style={{
-                top: `${position.top}px`,
-                left: `${position.left}px`,
+                top: ${position.top}px,
+                left: ${position.left}px,
             }}
         >
             <button className={styles.askButton} onClick={handleAskClick}>
