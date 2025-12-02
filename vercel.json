@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/chat",
+            "destination": "https://hackathon-rag.vercel.app/query"
+        }
+    ]
+}

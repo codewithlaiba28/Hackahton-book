@@ -1,0 +1,239 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Imports: Literata, Montserrat, Fira Code, JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Typography */
+  --ifm-font-family-base: Georgia, 'Literata', serif;
+  --ifm-heading-font-family: 'Montserrat', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', 'JetBrains Mono', monospace;
+  --ifm-heading-font-weight: 600;
+
+  /* Sizing & Spacing */
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.7;
+
+  /* Layout */
+  --ifm-container-width: 720px;
+  --ifm-container-padding-horizontal: 40px;
+
+  /* Light Mode Colors */
+  --ifm-background-color: #FAF8F3; /* Warm Cream */
+  --ifm-background-surface-color: #FAF8F3;
+  
+  --ifm-color-primary: #C17B4A; /* Warm Copper */
+  --ifm-color-primary-dark: #ad6e42;
+  --ifm-color-primary-darker: #a3683e;
+  --ifm-color-primary-darkest: #865633;
+  --ifm-color-primary-light: #c9885b;
+  --ifm-color-primary-lighter: #cd8f64;
+  --ifm-color-primary-lightest: #d9a47f;
+
+  --ifm-color-content: #2B2B2B; /* Soft Black */
+  --ifm-color-content-secondary: #5A5A5A; /* Medium Gray */
+  
+  --ifm-link-color: #8B6341; /* Warm Brown */
+  --ifm-link-hover-color: #A67C52;
+  
+  --ifm-border-color: #E8E5E0;
+  --ifm-hr-border-color: #E8E5E0;
+
+  /* Code Blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-code-background: #F5F2ED;
+  --ifm-code-color: #3E3E3E;
+}
+
+/* Mobile Overrides */
+@media (max-width: 996px) {
+  :root {
+    --ifm-font-size-base: 16px;
+    --ifm-container-padding-horizontal: 20px;
+  }
+}
+
+/* Global Body Styles */
+body {
+  letter-spacing: 0.02em;
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  /* Colors */
+  --ifm-background-color: #1E1E1E; /* True Dark */
+  --ifm-background-surface-color: #1E1E1E;
+
+  --ifm-color-primary: #D4956C; /* Lighter Copper */
+  --ifm-color-primary-dark: #cf8a5d;
+  --ifm-color-primary-darker: #cd8456;
+  --ifm-color-primary-darkest: #c57340;
+  --ifm-color-primary-light: #d9a07b;
+  --ifm-color-primary-lighter: #dba682;
+  --ifm-color-primary-lightest: #e4b89a;
+
+  --ifm-color-content: #E8E6E3; /* Off-white */
+  --ifm-color-content-secondary: #B8B6B3; /* Medium Gray */
+
+  --ifm-link-color: #B89968; /* Golden Brown */
+  --ifm-link-hover-color: #CCA876;
+
+  --ifm-border-color: #3A3A3A;
+  --ifm-hr-border-color: #3A3A3A;
+
+  /* Code Blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-code-background: #2A2A2A;
+  --ifm-code-color: #E0DED9;
+}
+
+/* ========================================
+   PERSONALIZATION THEME CLASSES
+   ======================================== */
+
+/* Text Color Personalization - Applies to headings, links, and primary elements only */
+.theme-text-pink h1,
+.theme-text-pink h2,
+.theme-text-pink h3,
+.theme-text-pink h4,
+.theme-text-pink h5,
+.theme-text-pink h6,
+.theme-text-pink .menu__link--active,
+.theme-text-pink .table-of-contents__link--active {
+  color: #E91E63 !important;
+}
+
+.theme-text-pink a {
+  color: #D81B60;
+}
+
+.theme-text-pink a:hover {
+  color: #E91E63;
+}
+
+.theme-text-pink .navbar__brand,
+.theme-text-pink .button--primary {
+  background-color: #E91E63;
+}
+
+.theme-text-green h1,
+.theme-text-green h2,
+.theme-text-green h3,
+.theme-text-green h4,
+.theme-text-green h5,
+.theme-text-green h6,
+.theme-text-green .menu__link--active,
+.theme-text-green .table-of-contents__link--active {
+  color: #4CAF50 !important;
+}
+
+.theme-text-green a {
+  color: #388E3C;
+}
+
+.theme-text-green a:hover {
+  color: #4CAF50;
+}
+
+.theme-text-green .navbar__brand,
+.theme-text-green .button--primary {
+  background-color: #4CAF50;
+}
+
+.theme-text-darkblue h1,
+.theme-text-darkblue h2,
+.theme-text-darkblue h3,
+.theme-text-darkblue h4,
+.theme-text-darkblue h5,
+.theme-text-darkblue h6,
+.theme-text-darkblue .menu__link--active,
+.theme-text-darkblue .table-of-contents__link--active {
+  color: #1976D2 !important;
+}
+
+.theme-text-darkblue a {
+  color: #1565C0;
+}
+
+.theme-text-darkblue a:hover {
+  color: #1976D2;
+}
+
+.theme-text-darkblue .navbar__brand,
+.theme-text-darkblue .button--primary {
+  background-color: #1976D2;
+}
+
+/* Background Theme Personalization */
+.theme-bg-day {
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-color-content: #2B2B2B; /* Dark text for readability */
+  --ifm-color-content-secondary: #5A5A5A;
+}
+
+.theme-bg-night-dark {
+  --ifm-background-color: #1E1E1E;
+  --ifm-background-surface-color: #1E1E1E;
+  --ifm-color-content: #E8E6E3;
+  --ifm-color-content-secondary: #B8B6B3;
+  --ifm-border-color: #3A3A3A;
+  --ifm-hr-border-color: #3A3A3A;
+  --ifm-code-background: #2A2A2A;
+  --ifm-code-color: #E0DED9;
+}
+
+.theme-bg-night-offwhite {
+  --ifm-background-color: #F5F5F0;
+  --ifm-background-surface-color: #F5F5F0;
+  --ifm-color-content: #2B2B2B;
+  --ifm-color-content-secondary: #5A5A5A;
+  --ifm-border-color: #D8D8D0;
+  --ifm-hr-border-color: #D8D8D0;
+  --ifm-code-background: #EAEAE5;
+  --ifm-code-color: #3E3E3E;
+}
+
+.theme-bg-night-creme {
+  --ifm-background-color: #FFF8E1;
+  --ifm-background-surface-color: #FFF8E1;
+  --ifm-color-content: #3E2723;
+  --ifm-color-content-secondary: #6D4C41;
+  --ifm-border-color: #F5E6C8;
+  --ifm-hr-border-color: #F5E6C8;
+  --ifm-code-background: #FFF3CD;
+  --ifm-code-color: #3E2723;
+}
+
+/* Smooth transitions for theme changes */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sidebar & TOC Overrides */
+.menu__link,
+.table-of-contents__link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+/* Footer Overrides */
+:root {
+  --ifm-footer-background-color: #F5F2ED;
+  --ifm-footer-color: #2B2B2B;
+  --ifm-footer-link-color: #8B6341;
+  --ifm-footer-link-hover-color: #A67C52;
+  --ifm-footer-title-color: #5A5A5A;
+}
+
+[data-theme='dark'] {
+  --ifm-footer-background-color: #2A2A2A;
+  --ifm-footer-color: #E8E6E3;
+  --ifm-footer-link-color: #B89968;
+  --ifm-footer-link-hover-color: #CCA876;
+  --ifm-footer-title-color: #B8B6B3;
+}
