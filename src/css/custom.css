@@ -168,46 +168,7 @@ body {
   background-color: #1976D2;
 }
 
-/* Background Theme Personalization */
-.theme-bg-day {
-  --ifm-background-color: #FFFFFF;
-  --ifm-background-surface-color: #FFFFFF;
-  --ifm-color-content: #2B2B2B; /* Dark text for readability */
-  --ifm-color-content-secondary: #5A5A5A;
-}
 
-.theme-bg-night-dark {
-  --ifm-background-color: #1E1E1E;
-  --ifm-background-surface-color: #1E1E1E;
-  --ifm-color-content: #E8E6E3;
-  --ifm-color-content-secondary: #B8B6B3;
-  --ifm-border-color: #3A3A3A;
-  --ifm-hr-border-color: #3A3A3A;
-  --ifm-code-background: #2A2A2A;
-  --ifm-code-color: #E0DED9;
-}
-
-.theme-bg-night-offwhite {
-  --ifm-background-color: #F5F5F0;
-  --ifm-background-surface-color: #F5F5F0;
-  --ifm-color-content: #2B2B2B;
-  --ifm-color-content-secondary: #5A5A5A;
-  --ifm-border-color: #D8D8D0;
-  --ifm-hr-border-color: #D8D8D0;
-  --ifm-code-background: #EAEAE5;
-  --ifm-code-color: #3E3E3E;
-}
-
-.theme-bg-night-creme {
-  --ifm-background-color: #FFF8E1;
-  --ifm-background-surface-color: #FFF8E1;
-  --ifm-color-content: #3E2723;
-  --ifm-color-content-secondary: #6D4C41;
-  --ifm-border-color: #F5E6C8;
-  --ifm-hr-border-color: #F5E6C8;
-  --ifm-code-background: #FFF3CD;
-  --ifm-code-color: #3E2723;
-}
 
 /* Smooth transitions for theme changes */
 html {

@@ -46,7 +46,7 @@ const TextSelectionPopup: React.FC<TextSelectionPopupProps> = ({ onAskSelected }
 
         const handleClickOutside = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            if (!target.closest(.${styles.popup})) {
+            if (!target.closest(`.${styles.popup}`)) {
                 setVisible(false);
             }
         };
@@ -72,8 +72,8 @@ const TextSelectionPopup: React.FC<TextSelectionPopupProps> = ({ onAskSelected }
         <div
             className={styles.popup}
             style={{
-                top: ${position.top}px,
-                left: ${position.left}px,
+                top: `${position.top}px`,
+                left: `${position.left}px`,
             }}
         >
             <button className={styles.askButton} onClick={handleAskClick}>
@@ -84,3 +84,4 @@ const TextSelectionPopup: React.FC<TextSelectionPopupProps> = ({ onAskSelected }
 };
 
 export default TextSelectionPopup;
+

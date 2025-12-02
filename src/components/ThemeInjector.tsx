@@ -35,12 +35,7 @@ const getRegularTextColorClass = (color: RegularTextColor): string => {
     return classMap[color] || '';
 };
 
-/**
- * Get CSS class name for background theme
- */
-const getBackgroundClass = (mode: BackgroundMode): string => {
-    return mode === 'day' ? 'theme-bg-day' : 'theme-bg-night';
-};
+
 
 /**
  * ThemeInjector component
@@ -65,8 +60,7 @@ export default function ThemeInjector(): null {
             'theme-text-darkblue',
             'theme-text-black',
             'theme-text-cream',
-            'theme-bg-day',
-            'theme-bg-night',
+            'theme-text-cream',
         ];
 
         html.classList.remove(...allThemeClasses);
@@ -75,11 +69,8 @@ export default function ThemeInjector(): null {
         if (personalization.isPersonalized) {
             const textColorClass = getTextColorClass(personalization.textColor);
             const regularTextColorClass = getRegularTextColorClass(personalization.regularTextColor);
-            const backgroundClass = getBackgroundClass(personalization.backgroundMode);
-
             if (textColorClass) html.classList.add(textColorClass);
             if (regularTextColorClass) html.classList.add(regularTextColorClass);
-            if (backgroundClass) html.classList.add(backgroundClass);
         }
     }, [personalization]);
 
