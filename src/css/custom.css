@@ -19,8 +19,8 @@
   --ifm-line-height-base: 1.7;
 
   /* Layout */
-  --ifm-container-width: 720px;
-  --ifm-container-padding-horizontal: 40px;
+  --ifm-container-width: 1140px;
+  --ifm-container-padding-horizontal: 20px;
 
   /* Light Mode Colors */
   --ifm-background-color: #FAF8F3; /* Warm Cream */
@@ -197,4 +197,107 @@ html {
   --ifm-footer-link-color: #B89968;
   --ifm-footer-link-hover-color: #CCA876;
   --ifm-footer-title-color: #B8B6B3;
+}
+
+
+
+
+
+/* Documentation Layout Improvements */
+
+/* Wider content on larger screens */
+.container {
+  max-width: 1140px;
+}
+
+/* Better use of space in docs pages */
+.docMainContainer {
+  max-width: 100%;
+}
+
+article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  article {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 996px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  article {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  article {
+    padding: 0 12px;
+  }
+
+  /* Hide TOC sidebar on mobile for more space */
+  .table-of-contents {
+    display: none !important;
+  }
+
+  /* Improve headings */
+  .markdown > h1 {
+    font-size: 28px !important;
+    margin-bottom: 16px;
+  }
+
+  .markdown > h2 {
+    font-size: 24px !important;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  .markdown > h3 {
+    font-size: 20px !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Better code blocks */
+  .markdown pre {
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  /* Responsive tables */
+  .markdown table {
+    display: block;
+    overflow-x: auto;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  article {
+    padding: 0 8px;
+  }
+
+  .markdown > h1 {
+    font-size: 24px !important;
+  }
+
+  .markdown > h2 {
+    font-size: 20px !important;
+  }
+
+  .markdown > h3 {
+    font-size: 18px !important;
+  }
 }
